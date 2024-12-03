@@ -36,7 +36,6 @@ cardsArray.forEach((item) =>{
     const card = document.createElement('div')
     card.classList.add('card')
     card.dataset.name = item.name
-    const img = item.img
-    card.style.backgroundImage = 'url('+img+')'
+    card.style.backgroundImage = 'url('+item.img+')'
     grid.appendChild(card)
 })
