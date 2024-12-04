@@ -1,0 +1,85 @@
+.grid {
+  width: 900px;
+
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  position: relative;
+  transform-style: preserve-3d;
+  margin: 1em;
+  padding: 1em;
+}
+
+.selected {
+  transform: rotateY(180deg);
+}
+.match .front {
+  background: white;
+}
+
+.card,
+.back,
+.front {
+  height: 150px;
+  width: 150px;
+  transition: 0.4s;
+}
+
+.back,
+.front {
+  position: absolute;
+  backface-visibility: hidden;
+  border: solid;
+  border-radius: 1em;
+}
+.front {
+  background: url("../img/question.svg");
+  background-size: contain;
+  transition: 0.4;
+}
+.back {
+  transform: rotateY(180deg);
+  background-color: #6589f9;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.front:hover {
+  transform: scale(1.07);
+}
+section {
+  display: flex;
+  justify-content: center;
+}
+table {
+  table-layout: fixed;
+  width: 100%;
+  border: 3px solid rgb(0, 0, 0);
+  border-collapse: collapse;
+}
+tbody td,
+th {
+  text-align: center;
+  border: 3px solid;
+}
+.victory {
+  animation-duration: 0.1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
+@keyframes clignoter {
+  0% {
+    background: rgb(0, 255, 89);
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: yellow;
+  }
+}

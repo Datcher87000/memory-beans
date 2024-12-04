@@ -1,57 +1,61 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 20px 0;
-  background: #6589f9;
+  margin: 2em;
+  background: #e8ce91;
+ 
 }
-
-.grid {
-  max-width: 960px;
-  margin: 0 auto;
+nav {
+  margin: 2em;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  padding: 2em;
+  border: solid;
+  border-radius: 1em;
+}
+nav a {
+  transition: 0.5s;
+  color: black;
+  border: solid;
+  text-decoration: none;
+  margin: auto;
+  padding: 1em;
+  border-radius: 1em;
 }
 
-.card {
-  position: relative;
-  transition: all 0.4s linear;
-  transform-style: preserve-3d;
-  margin: 5px;
+nav a:hover {
+  transform: scale(1.15);
+}
+#regles,
+h2,#resume p,
+#infoJeu p,h1,#imgJeu,#imgProfil,form,div {
+  display: flex;
+  justify-content: center;
+}
+@keyframes clignoter {
+  0% {
+    background: rgb(0, 255, 89);
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: yellow;
+  }
+}
+#formuBody {
+  animation-duration: 0.1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
 }
 
-.selected {
-  transform: rotateY(180deg);
-}
-.match .front {
-  background: white ;
-}
 
-
-.card,
-.back,
-.front {
-  height: 150px;
+#imgProfil{
+    height: 150px;
   width: 150px;
 }
 
-.back,
-.front {
-  position: absolute;
-  backface-visibility: hidden;
+form {
+  font-size: 2em;
 }
-.front {
-  background: url('../img/question.svg');
-  background-size: contain;
-}
-.back {
-  transform: rotateY(180deg);
-  background-color: #6589f9;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
+
+
