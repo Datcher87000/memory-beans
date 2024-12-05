@@ -1,6 +1,6 @@
-import { clearFieldCounter, displayCounter, victory } from "./counter.js";
-import { cardsArray } from "./imgGrid.js";
-import { match } from "./checker.js";
+import { clearFieldCounter, displayCounter, victory } from "./moduleApp/counter.js";
+import { cardsArray } from "./moduleApp/imgGrid.js";
+import { match } from "./moduleApp/checker.js";
 
 let rebours = cardsArray.length;
 let firstGuess = "";

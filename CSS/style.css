@@ -1,3 +1,8 @@
+*{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 100;
+    font-style: normal;
+}
 body {
   margin: 2em;
   background: #e8ce91;
@@ -19,6 +24,7 @@ nav a {
   margin: auto;
   padding: 1em;
   border-radius: 1em;
+  font-size: 20px;
 }
 
 nav a:hover {
@@ -30,32 +36,22 @@ h2,#resume p,
   display: flex;
   justify-content: center;
 }
-@keyframes clignoter {
-  0% {
-    background: rgb(0, 255, 89);
-  }
-  50% {
-    background: red;
-  }
-  100% {
-    background: yellow;
-  }
-}
-#formuBody {
-  animation-duration: 0.1s;
-  animation-name: clignoter;
-  animation-iteration-count: infinite;
-  transition: none;
-}
-
-
-#imgProfil{
-    height: 150px;
-  width: 150px;
-}
-
 form {
   font-size: 2em;
 }
+li, .resume{
+  font-size: 25px;
+}
+.resume{
+  flex-direction: column;
+}
+h2{
+    font-size: 3em;
 
+}
+h1{
+  font-size: larger;
+  font-size: 3em;
+  margin: 1em;
+}
 

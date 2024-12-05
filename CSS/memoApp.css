@@ -34,12 +34,15 @@
   position: absolute;
   backface-visibility: hidden;
   border: solid;
-  border-radius: 1em;
+  
 }
 .front {
+  
   background: url("../img/question.svg");
   background-size: contain;
   transition: 0.4;
+  right: 0px;
+
 }
 .back {
   transform: rotateY(180deg);
@@ -47,6 +50,8 @@
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+  right: 0px;
+  
 }
 .front:hover {
   transform: scale(1.07);

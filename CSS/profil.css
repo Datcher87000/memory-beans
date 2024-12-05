@@ -1,0 +1,82 @@
+* {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 100;
+}
+body {
+  margin: 2em;
+  background: #e8ce91;
+}
+nav {
+  margin: 2em;
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  border: solid;
+  border-radius: 1em;
+}
+nav a {
+  transition: 0.5s;
+  color: black;
+  border: solid;
+  text-decoration: none;
+  margin: auto;
+  padding: 1em;
+  border-radius: 1em;
+  font-size: 20px;
+}
+
+nav a:hover {
+  transform: scale(1.15);
+}
+#imgProfil,
+h1 {
+  display: flex;
+  justify-content: center;
+}
+#imgProfil {
+  margin-left: 10%;
+
+  height: 150px;
+  width: 150px;
+  border: 2px solid;
+  border-radius: 10em;
+  background-color: aliceblue;
+}
+#password, #email, #identifiant, #confirmPassword {
+  width: 30%;
+}
+#emailError, #passwordError, #identifiantError{
+    color: red;
+}
+form {
+  margin-left: 40%;
+}
+h1 {
+  font-size: larger;
+  font-size: 3em;
+  margin: 1em;
+}
+h2 {
+  font-size: 3em;
+  margin-left: 8%;
+}
+#connect, #inscription {
+  margin-left: 40%;
+}
+@keyframes clignoter {
+  0% {
+    background: rgb(0, 255, 89);
+  }
+  50% {
+    background: red;
+  }
+  100% {
+    background: yellow;
+  }
+}
+#formuBody {
+  animation-duration: 0.1s;
+  animation-name: clignoter;
+  animation-iteration-count: infinite;
+  transition: none;
+}
