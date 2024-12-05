@@ -65,17 +65,49 @@ h2 {
 }
 @keyframes clignoter {
   0% {
-    background: rgb(0, 255, 89);
+    background: url("../img/backgroundImg/mrBeanAgent.jpg");
+    background-size: cover;
+    
   }
-  50% {
-    background: red;
-  }
-  100% {
-    background: yellow;
+ 10% {
+    background: url("../img/backgroundImg/mrBeanAttentive.webp");
+    background-size: cover;
+    
+  }20% {
+    background: url("../img/backgroundImg/mrBeanFace.jpg");
+    background-size: cover;
+    
+  }30% {
+    background: url("../img/backgroundImg/mrBeanHolpUp.jpg");
+    background-size: cover;
+    
+  }40% {
+    background: url("../img/backgroundImg/MrBeanOops.jpeg");
+    background-size: cover;
+    
+  }50% {
+    background: url("../img/backgroundImg/mrBeanSad.jpg");
+    background-size: cover;
+    
+  }60% {
+    background: url("../img/backgroundImg/mrBeanSmile.jpg");
+    background-size: cover;
+    
+  }70% {
+    background: url("../img/backgroundImg/mrBeanStupi.webp");
+   background-size: cover;    
+  }80% {
+    background: url("../img/backgroundImg/mrBeanUp.jpg");
+    background-size: cover;
+    
+  }90% {
+    background: url("../img/backgroundImg/mrBeanWhut.jpg");
+    background-size: cover;
+    
   }
 }
 #formuBody {
-  animation-duration: 0.1s;
+  animation-duration: 0.9s;
   animation-name: clignoter;
   animation-iteration-count: infinite;
   transition: none;

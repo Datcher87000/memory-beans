@@ -6,7 +6,10 @@
   flex-wrap: wrap;
   justify-content: center;
 }
-
+h3{
+  display: flex;
+  justify-content: center;
+}
 .card {
   position: relative;
   transform-style: preserve-3d;

@@ -1,10 +1,6 @@
-import {
-  emailValidator,
-  passwordValidator,
-  identifiantValidator,
-} from "./moduleForm/validator.js";
+import { emailValidator, passwordValidator, identifiantValidator} from "./moduleForm/validator.js";
 import { displayFieldError, clearFieldErrors } from "./moduleForm/errorMsg.js";
-
+import { saveToLocalStorage } from "./moduleForm/localStroage.js";
 
 function handleSubmit(event) {
     event.preventDefault();
@@ -18,6 +14,10 @@ function handleSubmit(event) {
     };
     
     let hasError = false;
+    
+     if (!identifiantValidator(formData.identifiant)) {
+       displayFieldError("identifiant", "Veuillez renseigner un identifiant");
+     }
 
      if (!emailValidator(formData.email)) {
        displayFieldError("email", "Email invalide");
@@ -27,12 +27,9 @@ function handleSubmit(event) {
      if (!passwordValidator(formData.password)) {
        displayFieldError(
          "password",
-         "Le mot de passe doit contenir au moins 8 caractères, une majuscule, une minuscule , un chiffre et un caractère spécial"
+         "Le mot de passe doit contenir au moins 6 caractères, une majuscule, une minuscule , un chiffre et un caractère spécial"
        );
        hasError = true;
-     }
-     if (!identifiantValidator(formData.identifiant)) {
-       displayFieldError("identifiant", "Veuillez renseigner un identifiant");
      }
      if (formData.password != formData.confirmPassword) {
          displayFieldError("confirmPassword","Les deux mot de passe ne sont pas identiques")
