@@ -45,7 +45,7 @@ h1 {
 #password, #email, #identifiant, #confirmPassword {
   width: 30%;
 }
-#emailError, #passwordError, #identifiantError{
+#emailError, #passwordError, #identifiantError, #confirmPasswordError{
     color: red;
 }
 form {

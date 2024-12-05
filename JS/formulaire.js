@@ -14,6 +14,7 @@ function handleSubmit(event) {
       identifiant: document.getElementById("identifiant").value,
       email: document.getElementById("email").value,
       password: document.getElementById("password").value,
+      confirmPassword: document.getElementById("confirmPassword").value,
     };
     
     let hasError = false;
@@ -32,6 +33,9 @@ function handleSubmit(event) {
      }
      if (!identifiantValidator(formData.identifiant)) {
        displayFieldError("identifiant", "Veuillez renseigner un identifiant");
+     }
+     if (formData.password != formData.confirmPassword) {
+         displayFieldError("confirmPassword","Les deux mot de passe ne sont pas identiques")
      }
       if (hasError) {
         return;
